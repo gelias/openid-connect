@@ -8,4 +8,11 @@ router.get('/', function(req, res, next) {
   
 });
 
+router.get('/authorized', function(req, res, next) {
+  var access_token = req.query.access_token
+  var token_type = req.query.token_type
+  res.render('authorized', { title: 'Successfully Authorized', access_token: access_token, token_type: token_type });
+  
+});
+
 module.exports = router;
