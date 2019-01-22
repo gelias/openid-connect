@@ -8,6 +8,7 @@ block content
   form(method='POST' action='https://github.com/login/oauth/access_token')
     input#name.form-control(type='text', name='client_id' value='6732cc99696662f4c470')
     input#name.form-control(type='text', name='client_secret' value='d190c1c0a919a9be09514be2a04c7c9bbff4cfcc')
+    input#name.form-control(type='text', name='code' value=#{code} )
     input#name.form-control(type='text', name='redirect_uri' value='https://eliasopenidconnect.herokuapp.com/callback/authorized')
     input#name.form-control(type='text', name='state' value='#{state}')
 
