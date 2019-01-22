@@ -2,4 +2,12 @@ extends layout
 
 block content
   h1= title
-  button sign in
+  form(method='GET' action='https://github.com/login/oauth/authorize')
+    input#name.form-control(type='text', name='client_id' value='6732cc99696662f4c470')
+    input#name.form-control(type='text', name='redirect_uri' value='https://eliasopenidconnect.herokuapp.com/callback')
+    input#name.form-control(type='text', name='login' value='gelias')
+    input#name.form-control(type='text', name='scope' value='user')
+    input#name.form-control(type='text', name='state' value='91263871627832323')
+    input#name.form-control(type='text', name='allow_signup' value='false')
+
+    button.btn.btn-primary(type='submit') Sign in
