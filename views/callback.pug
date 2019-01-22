@@ -5,7 +5,7 @@ block content
   p Code #{code}
   p State #{state}
 
-  form(method='POST' action='https://github.com/login/oauth/access_token')
+  form(method='POST' action='https://github.com/login/oauth/access_token' accept="application/json")
     input#name.form-control(type='text', name='client_id' value='6732cc99696662f4c470')
     input#name.form-control(type='text', name='client_secret' value='d190c1c0a919a9be09514be2a04c7c9bbff4cfcc')
     input#name.form-control(type='text', name='code' value='#{code}' )
