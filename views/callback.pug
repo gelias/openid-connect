@@ -10,6 +10,7 @@ block content
     input#name.form-control(type='text', name='client_secret' value='d190c1c0a919a9be09514be2a04c7c9bbff4cfcc')
     input#name.form-control(type='text', name='code' value='#{code}' )
     input#name.form-control(type='text', name='redirect_uri' value='https://eliasopenidconnect.herokuapp.com/callback/authorized')
+    input#name.form-control(type='text', name='grant_type' value='authorization_code')
     input#name.form-control(type='text', name='state' value='#{state}')
 
     button.btn.btn-primary(type='submit') Sign in
