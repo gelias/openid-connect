@@ -2,14 +2,5 @@ extends layout
 
 block content
   h1= title
-  p Code #{code}
-  p State #{state}
 
-  form(method='POST' action='https://www.googleapis.com/oauth2/v4/token' accept='application/json')
-    input#name.form-control(type='text', name='client_id' value='907113127809-0pmnffpdsuf6epqbs7g41215pke1eum7.apps.googleusercontent.com')
-    input#name.form-control(type='text', name='client_secret' value='S2zu9HwDrdw4jKZZR65kcs8a')
-    input#name.form-control(type='text', name='code' value='#{code}' )
-    input#name.form-control(type='text', name='redirect_uri' value='https://eliasopenidconnect.herokuapp.com/callback/authorized')
-    input#name.form-control(type='text', name='grant_type' value='authorization_code')
-
-    button.btn.btn-primary(type='submit') Sign in
+  a(href='umov://openid?access_token=ya29.GluaBmO-fVhefFaRUGCHk4RoMCMSYxDnDAhrzXrVR8cE7ZBHysmBR0pHt3DvpCCkkUgpcWQvpKGI4rj_Kkw86-csTk-9XJcNCgM-8JE7Mp7JM6u-c-toDW69CL3D&id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6ImIxNWEyYjhmN2E2YjNmNmJjMDhiYzFjNTZhODg0MTBlMTQ2ZDAxZmQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI5MDcxMTMxMjc4MDktMHBtbmZmcGRzdWY2ZXBxYnM3ZzQxMjE1cGtlMWV1bTcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI5MDcxMTMxMjc4MDktMHBtbmZmcGRzdWY2ZXBxYnM3ZzQxMjE1cGtlMWV1bTcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDAxNDUyMjI0Njk1MzMxNDUyNDIiLCJoZCI6InVtb3YubWUiLCJlbWFpbCI6ImdlbGlhc0B1bW92Lm1lIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiI1VkFLdXlhVUZYNkVJVXhfeWh6dTN3IiwiaWF0IjoxNTQ4MjcyMDU4LCJleHAiOjE1NDgyNzU2NTh9.bOhl6_uFseI255HzsOdvsqsIW68rwuvc7aRuLFsZmLy5fzHa-sHgHdxTEGQnR4XyG2rGPStYHmR71RdgMz72Mev7mVnWrWKsP3UujNzguaQ_HApVZI2URwwEmhqXUo_rfgYEEhbuNe1rb7aFGdHjSTToecFqzUL0l7QoboDlKb_AwGywjGNhN64pqaWUd7uE59O083pb4JGQ-WBAlyD2uqOxAhELC4FOphrXKcC4PvRoM8NuBdXO6EAwXm5ywjGVwJ_aRL2QZw4wLQmNCKM-VH3y3sEFYavB27g7QvgSTZLTrQON3MlIiAlrEiPe8gXR5D3zAHFnlrZbsq4DD5C48Q') Sign in
