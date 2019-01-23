@@ -5,12 +5,11 @@ block content
   p Code #{code}
   p State #{state}
 
-  form(method='POST' action='https://github.com/login/oauth/access_token' accept='application/json')
-    input#name.form-control(type='text', name='client_id' value='6732cc99696662f4c470')
-    input#name.form-control(type='text', name='client_secret' value='d190c1c0a919a9be09514be2a04c7c9bbff4cfcc')
+  form(method='POST' action='https://www.googleapis.com/oauth2/v4/token' accept='application/json')
+    input#name.form-control(type='text', name='client_id' value='907113127809-0pmnffpdsuf6epqbs7g41215pke1eum7.apps.googleusercontent.com')
+    input#name.form-control(type='text', name='client_secret' value='S2zu9HwDrdw4jKZZR65kcs8a')
     input#name.form-control(type='text', name='code' value='#{code}' )
     input#name.form-control(type='text', name='redirect_uri' value='https://eliasopenidconnect.herokuapp.com/callback/authorized')
     input#name.form-control(type='text', name='grant_type' value='authorization_code')
-    input#name.form-control(type='text', name='state' value='#{state}')
 
     button.btn.btn-primary(type='submit') Sign in
