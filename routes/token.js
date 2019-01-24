@@ -20,10 +20,12 @@ router.get('/', function(req, res, next) {
     var res_json = JSON.parse(response.body)
     var access_token = res_json.access_token
     var id_token = res_json.id_token
-    res.render('token', { title: 'Token callbacked', access_token: access_token, id_token: id_token});
+
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({ access_token: access_token, id_token: id_token }));
   }).fail(function(response) {
-    console.log('NOK')
-    res.render('token', { title: 'ERROR callbacked'});
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify({ access_token: null, id_token: null }));
   });
 });
 
