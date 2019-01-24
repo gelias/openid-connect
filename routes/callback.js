@@ -6,6 +6,8 @@ router.get('/', function(req, res, next) {
   var code = req.query.code
   var state = req.query.state
 
+  res.render('callbackmobile', { title: 'Successfully callbacked', schema_url: 'http://google.com'});
+  /** 
   requestify.request('https://www.googleapis.com/oauth2/v4/token', {
       method: 'POST',
       dataType: 'form-url-encoded',
@@ -30,6 +32,7 @@ router.get('/', function(req, res, next) {
     });
 
   //res.render('callback', { title: 'empty callbacked', schema_url: 'http://google.com' });
+*/
   
 });
 
