@@ -2,6 +2,6 @@ extends layout
 
 block content
   h1= title
-  - var schema_url = "umov://openid?code=#{code}"
+  - var schema_url = "umov://openid?code=" + code
   p Link é #{schema_url}
   a(href=schema_url ) Get Code
