@@ -2,5 +2,5 @@ extends layout
 
 block content
   h1= title
-  var schema_url = 'umov://openid?access_token=#{access_token}&id_token=#{id_token}'
+  - var schema_url = 'umov://openid?access_token='+access_token+'&id_token='+id_token
   a(href=schema_url) Get Access Token
